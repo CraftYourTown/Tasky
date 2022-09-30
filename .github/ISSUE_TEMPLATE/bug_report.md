@@ -17,7 +17,7 @@ assignees: ''
 
 **Platform (please complete the following information):**
  - Platform [e.g spigot, paper, sponge]
- - Platform Version e.g 1.19]
+ - Platform Version [e.g 1.19]
  - Plugin Version [e.g. 1.0]
 
 **Additional context**
