@@ -1,6 +1,6 @@
 plugins {
     id("jvm-conventions")
-    id ("org.spongepowered.gradle.plugin") version "2.0.2"
+    id("org.spongepowered.gradle.plugin") version "2.0.2"
 }
 
 dependencies {
