@@ -16,8 +16,8 @@ tasks {
                 repositories {
                     maven {
                         credentials {
-                            username = System.getenv("CYT_REPO_USERNAME")
-                            password = System.getenv("CYT_REPO_PASSWORD")
+                            username = System.getenv("REPO_USERNAME")
+                            password = System.getenv("REPO_PASSWORD")
                         }
 
                         url = uri("https://repo.craftyourtown.com/repository/maven-public/")
