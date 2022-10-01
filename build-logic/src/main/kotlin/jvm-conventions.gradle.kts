@@ -3,6 +3,7 @@ plugins {
     id("com.github.johnrengelman.shadow")
     id("org.jlleitschuh.gradle.ktlint")
     id("org.jetbrains.kotlin.jvm")
+    id("org.cadixdev.licenser")
 }
 
 repositories {
@@ -23,6 +24,12 @@ java {
 
 kotlin {
     explicitApi()
+}
+
+license {
+    header.set(resources.text.fromFile(rootProject.file("LICENSE_HEADER")))
+
+    include("**/*.java", "**/*.kt")
 }
 
 tasks {
