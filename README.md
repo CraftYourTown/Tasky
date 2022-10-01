@@ -4,7 +4,7 @@ Tasky is a task-based interactivity plugin for players to earn rewards.
 ## Usage
 Download Tasky from a popular Minecraft Marketplace, such as [SpigotMC](https://spigotmc.org)
 or [Polymart](https://polymart.org). You are also welcome to compile the plugin from source using the 
-[Developer Guide](./README.md#Developer Guide) below, however: Please note, you will **not** recieve support 
+[Developer Guide](https://github.com/CraftYourTown/Tasky/blob/update/readme/README.md#developer-guide) below, however: Please note, you will **not** recieve support 
 from 
 our 
 team.
