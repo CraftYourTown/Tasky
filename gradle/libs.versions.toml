@@ -1,5 +1,8 @@
 [versions]
 stdlib = "1.7.10"
+coroutines = "1.6.4"
+ebean = "13.6.5"
+configurate = "4.1.2"
 
 spigot = "1.19.2-R0.1-SNAPSHOT"
 papi = "2.11.2"
@@ -14,11 +17,19 @@ adventure = "4.11.0"
 adventure-platform = "4.1.2"
 adventure-platform-fabric = "5.3.1"
 adventure-pagination = "4.0.0-SNAPSHOT"
-configurate = "4.1.2"
+
 cloud = "1.7.1"
 
 [libraries]
 stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib-jdk8", version.ref = "stdlib" }
+coroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
+scripting-common = { module = "org.jetbrains.kotlin:kotlin-scripting-common", version.ref = "stdlib" }
+scripting-jvm = { module = "org.jetbrains.kotlin:kotlin-scripting-jvm", version.ref = "stdlib" }
+scripting-jvm-host = { module = "org.jetbrains.kotlin:kotlin-scripting-jvm-host", version.ref = "stdlib" }
+scripting-dependencies = { module = "org.jetbrains.kotlin:kotlin-scripting-dependencies", version.ref = "stdlib" }
+scripting-maven = { module = "org.jetbrains.kotlin:kotlin-scripting-dependencies-maven", version.ref = "stdlib" }
+ebean = { module = "io.ebean:ebean", version.ref = "ebean" }
+configurate = { module = "org.spongepowered:configurate-yaml", version.ref = "configurate" }
 
 spigot = { module = "org.spigotmc:spigot-api", version.ref = "spigot" }
 papi = { module = "me.clip:placeholderapi", version.ref = "papi" }
@@ -30,12 +41,11 @@ fabric-api = { module = "net.fabricmc.fabric-api:fabric-api", version.ref = "fab
 sponge = { module = "org.spongepowered:spongeapi", version.ref = "sponge" }
 
 adventure = { module = "net.kyori:adventure-api", version.ref = "adventure" }
+adventure-minimessage = { module = "net.kyori:adventure-text-minimessage", version.ref = "adventure" }
 adventure-bukkit = { module = "net.kyori:adventure-platform-bukkit", version.ref = "adventure-platform" }
 adventure-fabric = { module = "net.kyori:adventure-platform-fabric", version.ref = "adventure-platform-fabric" }
 adventure-sponge = { module = "net.kyori:adventure-platform-spongeapi", version.ref = "adventure-platform" }
 adventure-pagination = { module = "net.kyori:adventure-text-feature-pagination", version.ref = "adventure-pagination" }
-
-configurate = { module = "org.spongepowered:configurate-yaml", version.ref = "configurate" }
 
 cloud-core = { module = "cloud.commandframework:cloud-core", version.ref = "cloud" }
 cloud-paper = { module = "cloud.commandframework:cloud-paper", version.ref = "cloud" }
