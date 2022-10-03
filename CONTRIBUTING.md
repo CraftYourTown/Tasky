@@ -3,7 +3,7 @@
 Here we will outline the guidelines for contributing to Tasky.
 
 ## Contributor Licence Agreement
-By contributing to a [Mango Studios Limited](https://mangostudios.uk) (Mango Studios) open-source project, you agree to the licence and terms of the specfieid licence.
+By contributing to a [Mango Studios Limited](https://mangostudios.uk) (Mango Studios) open-source project, you agree to the licence and terms of the specified licence.
 We reserve the right to modify and reject any contribution if it does not align with our internal organisations policies. By contributing, you are
 waiving all personal copyright of your code and handing over rights to Mango Studios.
 
