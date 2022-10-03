@@ -4,4 +4,6 @@ plugins {
 
 dependencies {
     compileOnlyApi(libs.stdlib)
+    compileOnlyApi(libs.coroutines)
+    compileOnlyApi(libs.adventure)
 }
