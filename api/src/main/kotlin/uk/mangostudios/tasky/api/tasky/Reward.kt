@@ -27,6 +27,13 @@ package uk.mangostudios.tasky.api.tasky
 
 import uk.mangostudios.tasky.api.reward.Weighted
 
+/**
+ * Creates a [Reward].
+ *
+ * @param command The command of the reward.
+ * @param weight The weight of the reward.
+ * @return The reward.
+ */
 public fun reward(command: String, weight: Double): Reward {
     return object : Reward {
         override val command = command
@@ -34,6 +41,12 @@ public fun reward(command: String, weight: Double): Reward {
     }
 }
 
+/**
+ * A reward is a command that is executed when a task is completed.
+ *
+ * @property command The command to execute.
+ * @property weight The weight of the reward.
+ */
 public interface Reward : Weighted {
 
     public val command: String

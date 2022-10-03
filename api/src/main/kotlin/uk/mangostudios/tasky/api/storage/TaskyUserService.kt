@@ -29,16 +29,53 @@ import kotlinx.coroutines.Deferred
 import uk.mangostudios.tasky.api.tasky.TaskyUser
 import java.util.UUID
 
+/**
+ * Handles the storage of [TaskyUser]s.
+ *
+ * @property cache The online users.
+ */
 public interface TaskyUserService {
 
     public val cache: MutableMap<UUID, TaskyUser>
 
+    /**
+     * Saves a [TaskyUser] to the database.
+     *
+     * @param user The user to save.
+     */
     public suspend fun save(user: TaskyUser)
+
+    /**
+     * Saves multiple [TaskyUser]s to the database.
+     *
+     * @param users The users to save.
+     */
     public suspend fun save(users: List<TaskyUser>)
+
+    /**
+     * Gets a [TaskyUser] from the database.
+     *
+     * @param uuid The UUID of the user to get.
+     * @return The user.
+     */
     public fun getAsync(uuid: UUID): Deferred<TaskyUser?>
+
+    /**
+     * Adds a [TaskyUser] to the cache.
+     */
     public fun addToCache(user: TaskyUser)
+
+    /**
+     * Removes a [TaskyUser] from the cache.
+     */
     public fun removeFromCache(uuid: UUID)
 
+    /**
+     * Gets a [TaskyUser] from the cache.
+     *
+     * @param uuid The UUID of the user to get.
+     * @return The user.
+     */
     public operator fun get(uuid: UUID): TaskyUser {
         return cache[uuid] ?: throw IllegalArgumentException("User not in cache")
     }

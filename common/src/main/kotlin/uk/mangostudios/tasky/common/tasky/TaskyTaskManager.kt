@@ -49,7 +49,7 @@ public abstract class TaskyTaskManager<E : Any> {
                 currentTask = if (currentTask == null) tasks.random() else currentTask
 
                 currentTask?.let {
-                    if (it.startTime == null && config.minimumPlayers > TaskyAPI.taskyCompanion.onlinePlayers()) {
+                    if (it.startTime == null && config.minimumPlayers > TaskyAPI.tasky.onlinePlayers()) {
                         it.start()
                     } else {
                         it.startTime?.let { startTime ->

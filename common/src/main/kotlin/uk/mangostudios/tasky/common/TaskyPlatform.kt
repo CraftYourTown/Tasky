@@ -37,7 +37,7 @@ import java.nio.file.Path
 import kotlin.io.path.createDirectory
 import kotlin.io.path.exists
 
-public interface TaskyPlatform : Tasky {
+public interface TaskyPlatform<P> : Tasky<P> {
 
     public var commandManager: CommandManager
     public val dataDirectory: Path

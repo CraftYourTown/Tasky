@@ -27,6 +27,14 @@ package uk.mangostudios.tasky.api.tasky
 
 import java.util.UUID
 
+/**
+ * A tasky user.
+ *
+ * @property uuid The user's UUID.
+ * @property name The user's name.
+ * @property wins The user's amount of wins.
+ * @property dirty Whether the user's data has been modified.
+ */
 public interface TaskyUser {
 
     public val uuid: UUID
@@ -34,6 +42,12 @@ public interface TaskyUser {
     public var wins: Int
     public var dirty: Boolean
 
+    /**
+     * Mutates the user and marks it as dirty.
+     *
+     * @param block The mutation.
+     * @return The mutated user.
+     */
     public fun mutate(block: TaskyUser.() -> Unit): TaskyUser {
         block(this)
         this.dirty = true

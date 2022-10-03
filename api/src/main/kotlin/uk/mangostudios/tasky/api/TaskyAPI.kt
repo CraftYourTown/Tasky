@@ -25,8 +25,13 @@
 
 package uk.mangostudios.tasky.api
 
+/**
+ * Main entry point for the Tasky API.
+ */
 public object TaskyAPI {
 
-    public lateinit var tasky: Tasky
-    public lateinit var taskyCompanion: TaskyCompanion<*>
+    /**
+     * The [Tasky] instance.
+     */
+    public lateinit var tasky: Tasky<*>
 }

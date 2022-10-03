@@ -28,6 +28,16 @@ package uk.mangostudios.tasky.api.tasky
 import uk.mangostudios.tasky.api.reward.RandomSelector
 import java.util.UUID
 
+/**
+ * A tasky task.
+ *
+ * @property E The event type.
+ * @property clazz The event class.
+ * @property rewards The rewards.
+ * @property winCondition The win condition.
+ * @property player The event -> UUID mapper.
+ * @property startTime The start time, if the task has started, otherwise null.
+ */
 public interface TaskyTask<E : Any> {
 
     public val clazz: Class<E>
@@ -36,9 +46,29 @@ public interface TaskyTask<E : Any> {
     public val player: (E) -> UUID
     public var startTime: Long?
 
+    /**
+     * Start the task.
+     */
     public fun start()
+
+    /**
+     * End the task.
+     */
     public fun end()
+
+    /**
+     * Give a [Reward] to a [TaskyUser]
+     *
+     * @param user The user.
+     * @param reward The reward.
+     */
     public fun giveRewards(user: TaskyUser, reward: Reward)
+
+    /**
+     * End the task with a winner.
+     *
+     * @param user The winner.
+     */
     public fun win(user: TaskyUser) {
         giveRewards(user, RandomSelector.weighted(rewards).pick())
     }

@@ -25,15 +25,45 @@
 
 package uk.mangostudios.tasky.api
 
+import net.kyori.adventure.audience.Audience
 import uk.mangostudios.tasky.api.storage.TaskyUserService
+import uk.mangostudios.tasky.api.tasky.Reward
+import uk.mangostudios.tasky.api.tasky.TaskyUser
 
-public interface Tasky {
+/**
+ * Houses all public facing and platform dependent related functionality.
+ *
+ * @param P the platform specific Player.
+ */
+public interface Tasky<P> {
 
     public val taskyUserService: TaskyUserService
-    public val taskyCompanion: TaskyCompanion<*>
+    public val audience: Audience
 
     public fun init() {
         TaskyAPI.tasky = this
-        TaskyAPI.taskyCompanion = taskyCompanion
     }
+
+    /**
+     * Gives a [Reward] to a [TaskyUser].
+     *
+     * @param user The [TaskyUser] to give the reward to.
+     * @param reward The [Reward] to give.
+     */
+    public fun giveRewards(user: TaskyUser, reward: Reward)
+
+    /**
+     * Checks if player is in creative.
+     *
+     * @param player The player to check.
+     * @return true if player is in creative.
+     */
+    public fun isInCreative(player: P): Boolean
+
+    /**
+     * Gets the count of online players.
+     *
+     * @return The count of online players.
+     */
+    public fun onlinePlayers(): Int
 }

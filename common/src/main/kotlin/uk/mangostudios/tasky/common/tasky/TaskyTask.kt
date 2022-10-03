@@ -50,15 +50,16 @@ public class TaskyTask<E : Any>(
 
     override fun start() {
         startTime = System.currentTimeMillis()
-        TaskyAPI.taskyCompanion.audience.sendMessage(startMessage)
+        TaskyAPI.tasky.audience.sendMessage(startMessage)
     }
 
     override fun end() {
-        TaskyAPI.taskyCompanion.audience.sendMessage(endMessage)
+        TaskyAPI.tasky.audience.sendMessage(endMessage)
     }
 
     override fun giveRewards(user: TaskyUser, reward: Reward) {
-        TaskyAPI.taskyCompanion.giveRewards(user, reward)
+        TaskyAPI.tasky.giveRewards(user, reward)
+        TaskyAPI.tasky.audience.sendMessage(winMessage)
         user.mutate {
             wins++
         }
