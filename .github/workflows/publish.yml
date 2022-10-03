@@ -1,0 +1,25 @@
+name: "publish"
+
+on:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  build:
+    runs-on: "ubuntu-latest"
+    steps:
+      - name: "checkout repository"
+        uses: "actions/checkout@v3"
+
+      - name: "setup java"
+        uses: "actions/setup-java@v3"
+        with:
+          distribution: "temurin"
+          java-version: "17"
+
+      - name: "publish"
+        run: "gradle publish"
+        env:
+          REPO_USERNAME: "${{ secrets.REPO_USERNAME }}"
+          REPO_PASSWORD: "${{ secrets.REPO_PASSWORD }}"

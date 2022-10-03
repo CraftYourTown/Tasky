@@ -1,0 +1,55 @@
+[versions]
+stdlib = "1.7.10"
+coroutines = "1.6.4"
+ebean = "13.6.5"
+configurate = "4.1.2"
+
+spigot = "1.19.2-R0.1-SNAPSHOT"
+papi = "2.11.2"
+
+minecraft = "1.18.2"
+fabric-loader = "0.14.9"
+fabric-api = "0.59.0+1.18.2"
+
+sponge = "9.0.0"
+
+adventure = "4.11.0"
+adventure-platform = "4.1.2"
+adventure-platform-fabric = "5.3.1"
+adventure-pagination = "4.0.0-SNAPSHOT"
+
+cloud = "1.7.1"
+
+[libraries]
+stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib-jdk8", version.ref = "stdlib" }
+coroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
+scripting-common = { module = "org.jetbrains.kotlin:kotlin-scripting-common", version.ref = "stdlib" }
+scripting-jvm = { module = "org.jetbrains.kotlin:kotlin-scripting-jvm", version.ref = "stdlib" }
+scripting-jvm-host = { module = "org.jetbrains.kotlin:kotlin-scripting-jvm-host", version.ref = "stdlib" }
+scripting-dependencies = { module = "org.jetbrains.kotlin:kotlin-scripting-dependencies", version.ref = "stdlib" }
+scripting-maven = { module = "org.jetbrains.kotlin:kotlin-scripting-dependencies-maven", version.ref = "stdlib" }
+ebean = { module = "io.ebean:ebean", version.ref = "ebean" }
+configurate = { module = "org.spongepowered:configurate-yaml", version.ref = "configurate" }
+
+spigot = { module = "org.spigotmc:spigot-api", version.ref = "spigot" }
+papi = { module = "me.clip:placeholderapi", version.ref = "papi" }
+
+minecraft = { module = "com.mojang:minecraft", version.ref = "minecraft" }
+fabric-loader = { module = "net.fabricmc:fabric-loader", version.ref = "fabric-loader" }
+fabric-api = { module = "net.fabricmc.fabric-api:fabric-api", version.ref = "fabric-api" }
+
+sponge = { module = "org.spongepowered:spongeapi", version.ref = "sponge" }
+
+adventure = { module = "net.kyori:adventure-api", version.ref = "adventure" }
+adventure-minimessage = { module = "net.kyori:adventure-text-minimessage", version.ref = "adventure" }
+adventure-bukkit = { module = "net.kyori:adventure-platform-bukkit", version.ref = "adventure-platform" }
+adventure-fabric = { module = "net.kyori:adventure-platform-fabric", version.ref = "adventure-platform-fabric" }
+adventure-sponge = { module = "net.kyori:adventure-platform-spongeapi", version.ref = "adventure-platform" }
+adventure-pagination = { module = "net.kyori:adventure-text-feature-pagination", version.ref = "adventure-pagination" }
+
+cloud-core = { module = "cloud.commandframework:cloud-core", version.ref = "cloud" }
+cloud-paper = { module = "cloud.commandframework:cloud-paper", version.ref = "cloud" }
+cloud-fabric = { module = "cloud.commandframework:cloud-fabric", version.ref = "cloud" }
+cloud-sponge = { module = "cloud.commandframework:cloud-sponge7", version.ref = "cloud" }
+cloud-annotations = { module = "cloud.commandframework:cloud-annotations", version.ref = "cloud" }
+cloud-extras = { module = "cloud.commandframework:cloud-minecraft-extras", version.ref = "cloud" }
