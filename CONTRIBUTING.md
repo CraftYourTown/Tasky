@@ -14,5 +14,5 @@ We use the [Kotlin Style Guide](https://kotlinlang.org/docs/coding-conventions.h
 Your style will be checked on pull requests through `klint` and that check must pass for your pull request to be approved.
 
 ## Documentation
-All submitted code must be self-documenting and, if API changes have been made, must have accompanying Java Docs. The Java Docs must be easy to 
+All submitted code must be self-documenting and, if API changes have been made, must have accompanying KDocs. The KDocs must be easy to 
 understand and the reader must be able to understand the function of the code by reading it, or even reading the code its self.
